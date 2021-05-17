@@ -1,5 +1,6 @@
 ﻿using Catalog.API.Data;
 using Catalog.API.Entities;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -54,6 +55,7 @@ namespace Catalog.API.Repositories
 
         public async Task CreateProduct(Product product)
         {
+            product.Id = ObjectId.GenerateNewId().ToString();
             await _context.Products.InsertOneAsync(product);
         }
 
