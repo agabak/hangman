@@ -15,18 +15,19 @@ print(f"Psst, the solution is {chosen_word}")
 for _ in chosen_word:
     display.append("_")
 
-#check if there more "_" in the display array
+# *** check if there more "_" in the display array *** 
 end_of_game = False
 
 while  not end_of_game:
     guess = input("Guess a letter ").lower()
 
     if guess in chosen_word:
-        print(f"You have already guessed thid {guess} letter")
+        print(f"You have already guessed this {guess} letter")
 
     for indx, letter in enumerate(chosen_word):
         if letter == guess:
-           # print(f"Current position: {indx} Current letter: {letter} Guess letter: {guess}")
+            
+ # print(f"Current position: {indx} Current letter: {letter} Guess letter: {guess}")
             display[indx] = guess;
 
     if guess not in chosen_word:
@@ -37,7 +38,6 @@ while  not end_of_game:
             end_of_game = True
             print("You lose")
         
-
     if "_"  not in display:
         end_of_game = True
         print("You wine")
