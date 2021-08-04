@@ -1,5 +1,6 @@
 
 #Hangman
+from os import O_LARGEFILE
 import  random
 import  hangman_word
 import hangman_art 
@@ -26,7 +27,7 @@ while  not end_of_game:
 
     for indx, letter in enumerate(chosen_word):
         if letter == guess:
-            
+
  # print(f"Current position: {indx} Current letter: {letter} Guess letter: {guess}")
             display[indx] = guess;
 
@@ -43,3 +44,10 @@ while  not end_of_game:
         print("You wine")
 
     print(display)
+
+
+    import  sys
+    import getopt
+
+    opt,org = getopt.getopt(sys.argv, "Hell there")
+    print(opt, org)
