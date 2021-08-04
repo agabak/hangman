@@ -28,4 +28,4 @@ def prime_checker(number):
     else:
         print("Is not prime number")
 
-prime_checker(21)
+prime_checker(11)
