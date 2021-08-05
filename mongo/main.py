@@ -44,10 +44,3 @@ while  not end_of_game:
         print("You wine")
 
     print(display)
-
-
-    import  sys
-    import getopt
-
-    opt,org = getopt.getopt(sys.argv, "Hell there")
-    print(opt, org)
